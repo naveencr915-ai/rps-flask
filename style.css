@@ -1,0 +1,130 @@
+/* ===== GLOBAL STYLES ===== */
+body {
+    background-color: #000;
+    background-image: url('rock-paper-scissors-pattern.png');
+    background-repeat: repeat;
+    background-size: 250px 250px;
+    color: white;
+    font-family: 'Orbitron', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+
+/* Optional glow overlay */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle, rgba(0,255,204,0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* ===== HEADER ===== */
+h1 {
+    text-align: center;
+    color: #00ffcc;
+    margin: 10px;
+    text-shadow: 0 0 15px #00ffcc;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.main-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 85vh;
+}
+
+/* ===== CAMERA SECTION ===== */
+.camera-section {
+    width: 55%;
+}
+
+.camera-container {
+    position: relative;
+    width: 100%;
+}
+
+video {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    border: 4px solid #00ffcc;
+    border-radius: 20px;
+    box-shadow: 0 0 25px #00ffcc;
+}
+
+#overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* ===== GAME SECTION ===== */
+.game-section {
+    width: 35%;
+    text-align: center;
+    background: rgba(20, 20, 20, 0.8);
+    border: 2px solid #ff00ff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 25px #ff00ff;
+}
+
+#countdown {
+    color: yellow;
+    font-size: 40px;
+    text-shadow: 0 0 15px yellow;
+}
+
+#computer-hand {
+    font-size: 120px;
+    margin: 20px;
+    animation: shake 0.5s infinite;
+    text-shadow: 0 0 20px #ff00ff;
+}
+
+/* ===== BUTTON ===== */
+button {
+    padding: 15px 35px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #00ffcc, #ff00ff);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 20px #00ffcc;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #ff00ff;
+}
+
+/* ===== GAME AREA ===== */
+.game-area {
+    margin-top: 20px;
+}
+
+h2 {
+    margin: 15px;
+    font-size: 28px;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
