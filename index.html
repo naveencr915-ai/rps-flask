@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>AI Rock Paper Scissors</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <h1>AI CAMERA ROCK PAPER SCISSORS</h1>
+
+    <div class="main-container">
+
+        <!-- LEFT SIDE CAMERA -->
+        <div class="camera-section">
+
+            <div class="camera-container">
+
+                <video id="video"
+                autoplay
+                playsinline></video>
+
+                <canvas id="overlay"></canvas>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE GAME -->
+        <div class="game-section">
+
+            <h1 id="countdown">
+                Press Start
+            </h1>
+
+            <div id="computer-hand">
+
+                ❔
+
+            </div>
+
+            <button onclick="startGame()">
+                START GAME
+            </button>
+
+            <div class="game-area">
+
+                <h2 id="player">
+                    Your Move: ---
+                </h2>
+
+                <h2 id="computer">
+                    Computer Move: ---
+                </h2>
+
+                <h2 id="result">
+                    Result: ---
+                </h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<script src=
+"https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js">
+</script>
+
+<script src=
+"https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js">
+</script>
+
+<script src=
+"{{ url_for('static', filename='camera.js') }}">
+</script>
+
+<script src=
+"{{ url_for('static', filename='gesture.js') }}">
+</script>
+
+<script src=
+"{{ url_for('static', filename='game.js') }}">
+</script>
+
+</body>
+</html>
